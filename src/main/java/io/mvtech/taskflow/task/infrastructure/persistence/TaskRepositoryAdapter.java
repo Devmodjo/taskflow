@@ -4,6 +4,7 @@ import io.mvtech.taskflow.task.domain.entity.Task;
 import io.mvtech.taskflow.task.domain.port.TaskRepositoryPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
