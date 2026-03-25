@@ -1,4 +1,12 @@
 package io.mvtech.taskflow.task.domain.usecase.output;
 
-public record CreateTaskResult() {
+import io.mvtech.taskflow.task.domain.entity.enums.TaskStatus;
+
+import java.util.UUID;
+
+public record CreateTaskResult(
+        UUID taskId,
+        String taskname,
+        TaskStatus status
+) {
 }

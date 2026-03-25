@@ -5,6 +5,7 @@ import io.mvtech.taskflow.task.domain.port.TaskRepositoryPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -34,5 +35,12 @@ public class TaskRepositoryAdapter implements TaskRepositoryPort {
                 .stream()
                 .map(TaskJpaEntity::toDomain)
                 .toList();
+    }
+
+    @Override
+    public List<Task> findAll() {
+        ArrayList<Task> list = new ArrayList<>();
+        jpa.findAll().forEach(t -> list.add(t.toDomain()));
+        return list;
     }
 }

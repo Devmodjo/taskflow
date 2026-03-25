@@ -21,4 +21,6 @@ public interface TaskRepositoryPort {
 
     List<Task> findByAssignedTo(String assignedTo);
 
+    List<Task> findAll();
+
 }
